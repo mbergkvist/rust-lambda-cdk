@@ -29,7 +29,7 @@ export class RustFunction extends cdk.Construct {
       },
     });
 
-    this.function = new lambda.Function(this, props.bin, {
+    this.function = new lambda.Function(this, "Function", {
       code: this.code,
       handler: "bootstrap",
       runtime: lambda.Runtime.PROVIDED_AL2,

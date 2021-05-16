@@ -10,6 +10,5 @@ async fn main() -> Result<(), Error> {
 
 async fn handler(event: Value, _: Context) -> Result<Value, Error> {
     let first_name = event["firstName"].as_str().unwrap_or("App 1");
-
     Ok(json!({ "message": format!("Hello, {}!", first_name) }))
 }
